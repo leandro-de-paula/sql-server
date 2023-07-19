@@ -17,15 +17,15 @@ Este repositório contém materiais e exemplos para auxiliar no domínio de banc
 O repositório está organizado da seguinte forma:
 
 - [database: Banco de Dados para usar como testes](database/README.md)
-- [instruçõe: DML DDL DCL TCL](instrucoes/README.md)
-- [Operadores: Operadores usado no SQL SERVER](operadores/README.md)
-- [Exemplos: Scripts em geral](exemplos/)
+- [instrucoes: DML DDL DCL TCL](instrucoes/README.md)
+- [operadores: Operadores usado no SQL SERVER](operadores/README.md)
+- [exemplos: Scripts em geral](exemplos/)
 
 ## Como Utilizar este Repositório
 
 Cada módulo possui seu próprio README com instruções e informações sobre o tópico abordado. 
 
-Os exemplos estão disponíveis dentro de cada pasta, na pasta `exemplos/` temos scripts que podem ser utilizados como base para práticas e estudos adicionais.
+Os exemplos estão disponíveis dentro de cada pasta, e na pasta `exemplos/` temos scripts que podem ser utilizados como base para práticas e estudos adicionais.
 
 ## Contribuição
 
