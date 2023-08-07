@@ -3,8 +3,6 @@
 -- Script para extrair informações de uma Nota Fiscal Eletrônica no formato XML
 
 ----------------------------------------------------------------------------------------
-USE hinode
-GO
 
 WITH XMLNAMESPACES 
 (
