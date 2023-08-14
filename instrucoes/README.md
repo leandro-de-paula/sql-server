@@ -38,6 +38,7 @@ As instruções DML são usadas para manipular os dados dentro das tabelas do ba
    ```sql
    SELECT coluna1, coluna2 FROM tabela WHERE condição;
    ```
+   Veja mais exemplos DML: [Click Aqui](dml.sql)
 
 ## DDL (Data Definition Language)
 
