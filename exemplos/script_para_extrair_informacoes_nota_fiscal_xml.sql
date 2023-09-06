@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------------
 
--- Script para extrair informações de uma Nota Fiscal Eletrônica no formato XML
+-- Script para extrair informaÃ§Ãµes de uma Nota Fiscal EletrÃ´nica no formato XML
 
 ----------------------------------------------------------------------------------------
 
