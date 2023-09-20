@@ -36,7 +36,7 @@ Este repositório contém materiais e exemplos para auxiliar no domínio de banc
     ```
 6. Instale o Docker: 
     ```bash
-    sudo apt install docker-ce`
+    sudo apt install docker-ce
     ```
 
 #### SQL Server:
