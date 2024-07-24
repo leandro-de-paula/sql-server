@@ -1,4 +1,5 @@
-### sql-server
+[![sqlstyle.guide](https://img.shields.io/badge/style-sqlstyle.guide-brightgreen.svg)](https://www.sqlstyle.guide/)
+### sql-server 
 ---
 
 # Domínio de Banco de Dados e Linguagem SQL no SQL Server
@@ -98,9 +99,13 @@ Além dos materiais disponíveis neste repositório, recomenda-se consultar os s
 - [Microsoft Learn - SQL Server](https://docs.microsoft.com/learn/sql-server/)
 
 ## Referências
-Este repositório é baseado no curso da Udemy:
 
+Este repositório é baseado no curso da Udemy:
 Banco de dados Expert: Linguagem SQL e Administração.
+
+Baseado no Guia de Estilo SQL · SQL Style Guide
+- https://www.sqlstyle.guide/pt-br/
+- https://github.com/treffynnon/sqlstyle.guide 
 
 
 ## Licença
