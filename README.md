@@ -66,6 +66,7 @@ Os arquivos de banco de dados para uso no projeto estão localizados na pasta `d
 
 ### Restaurando os Bancos de Dados
 
+0. Copie o arquivo de restauração e cole na unidade C se for `Windows`.
 1. Abra o SQL Server Management Studio ou Azure Data Studio.
 2. Conecte-se à sua instância do SQL Server.
 3. Clique com o botão direito do mouse em "Databases" e selecione "Restore Database".
