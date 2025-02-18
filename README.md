@@ -4,55 +4,53 @@
 ![linux](https://img.shields.io/badge/linux-gray.svg?logo=linux)
 ![ubuntu](https://img.shields.io/badge/ubuntu-gray.svg?logo=ubuntu)
 ![arch-linux](https://img.shields.io/badge/arch-gray.svg?logo=arch-linux)
-![microsof-windows](https://img.shields.io/badge/microsoft-windows-lightblue.svg?logo=microsof-windows)
+![microsoft-windows](https://img.shields.io/badge/microsoft-windows-lightblue.svg?logo=microsoft-windows)
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/leandro-de-paula/sql-server/refs/heads/main/icons8-sql-server-144.png" alt="sql-server" />
   <h1 style="border: none; margin: 0;"><strong>SQL-SERVER</strong></h1>
 </div>
 
+---
 
+# Mastery of Databases and SQL Language in SQL Server
+
+This repository contains materials and examples to help master databases, concepts, and SQL language in the SQL Server environment. The content ranges from basic to advanced topics, providing a solid foundation for SQL Server database development and administration.
 
 ---
 
-# Domínio de Banco de Dados e Linguagem SQL no SQL Server
+## Objectives
 
-Este repositório contém materiais e exemplos para auxiliar no domínio de banco de dados, conceitos e linguagem SQL no ambiente do SQL Server. O conteúdo abrange desde o básico até tópicos avançados, fornecendo uma base sólida para o desenvolvimento e administração de bancos de dados utilizando o SQL Server.
-
----
-
-## Objetivos
-
-- **Aprender** os conceitos fundamentais de bancos de dados relacionais.
-- **Dominar** a linguagem SQL para manipulação e consulta de dados.
-- **Explorar** técnicas avançadas de otimização de consultas e desempenho.
-- **Compreender** os principais aspectos da administração de bancos de dados SQL Server.
+- **Learn** the fundamental concepts of relational databases.
+- **Master** the SQL language for data manipulation and querying.
+- **Explore** advanced techniques for query optimization and performance.
+- **Understand** the main aspects of SQL Server database administration.
 
 ---
 
-## Instalação e Configuração do Ambiente
+## Environment Setup and Installation
 
 ### Linux - **Ubuntu**
 
 #### Docker:
-1. Atualize o índice de pacotes do apt: `sudo apt update`
-2. Instale alguns pacotes necessários para que o apt use pacotes via HTTPS: 
+1. Update the apt package index: `sudo apt update`
+2. Install packages to allow apt to use a repository over HTTPS:
     ```bash
-   sudo apt install apt-transport-https ca-certificates curl software-properties-common
+    sudo apt install apt-transport-https ca-certificates curl software-properties-common
     ```
-3. Adicione a chave GPG para o repositório oficial do Docker ao sistema: 
-    ```bash 
+3. Add Docker’s official GPG key:
+    ```bash
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
     ```
-4. Adicione o repositório Docker às fontes APT:
+4. Add the Docker repository to APT sources:
     ```bash
     sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
     ```
-5. Atualize o índice de pacotes novamente: 
+5. Update the package index again:
     ```bash
     sudo apt update
     ```
-6. Instale o Docker: 
+6. Install Docker:
     ```bash
     sudo apt install docker-ce
     ```
@@ -61,134 +59,140 @@ Este repositório contém materiais e exemplos para auxiliar no domínio de banc
 
 #### Docker
 
-1. Atualize os repositórios:
+1. Update repositories:
    ```bash
    sudo pacman -Syu
    ```
 
-2. Instale o Docker pelo Pacman:
+2. Install Docker via Pacman:
    ```bash
    sudo pacman -S docker
    ```
 
-3. Habilite e inicie o serviço do Docker:
-   - Para habilitar o serviço no boot:
+3. Enable and start the Docker service:
+   - To enable the service on boot:
      ```bash
      sudo systemctl enable docker
      ```
-   - Para iniciar o serviço:
+   - To start the service:
      ```bash
      sudo systemctl start docker
      ```
 
-4. Adicione seu usuário ao grupo `docker` (opcional):
-   Isso permite usar o Docker sem precisar de `sudo`.
+4. Add your user to the `docker` group (optional):
+   This allows you to use Docker without `sudo`.
    ```bash
    sudo usermod -aG docker $USER
    ```
-   Depois, reinicie a sessão para aplicar as mudanças:
+   Then, restart your session to apply the changes:
    ```bash
    newgrp docker
    ```
 
-5. Verifique a instalação:
-   Execute o comando abaixo para garantir que o Docker está funcionando:
+5. Verify the installation:
+   Run the following commands to ensure Docker is working:
    ```bash
    docker --version
    docker run hello-world
    ```
 
-#### Observação:
-Para atualizações ou problemas específicos, consulte a [documentação oficial do Docker para Arch Linux](https://wiki.archlinux.org/title/Docker).
+#### Note:
+For updates or specific issues, refer to the [official Docker documentation for Arch Linux](https://wiki.archlinux.org/title/Docker).
 
 ---
 #### SQL Server:
-1. Siga as instruções oficiais da Microsoft para instalar o SQL Server no Docker: [Instruções aqui](https://docs.microsoft.com/pt-br/sql/linux/quickstart-install-connect-docker?view=sql-server-ver15&pivots=cs1-bash)
+1. Follow the official Microsoft instructions to install SQL Server on Docker: [Instructions here](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver15&pivots=cs1-bash)
 
-## Ferramentas Adicionais
+## Additional Tools
 
 ### **Azure Data Studio**
 
 #### **Ubuntu**
-1. Baixe o arquivo `.deb` do [site oficial](https://docs.microsoft.com/pt-br/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver15).
-2. Instale usando o comando: 
+1. Download the `.deb` file from the [official site](https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver15).
+2. Install using the command:
     ```bash
-    sudo dpkg -i <nome_do_arquivo>.deb
+    sudo dpkg -i <filename>.deb
     ```
 
 #### Azure Data Studio - Arch Linux:
-1. Use o AUR para instalar:
+1. Use AUR to install:
    ```bash
    paru -S azuredatastudio-bin
    ```
 
-   Certifique-se de que o `paru` esteja instalado no seu sistema para utilizar esse método.
+   Make sure `paru` is installed on your system to use this method.
 
 ---
 
 ### Windows
->Instalação do SQL Server e Azure Data Studio via Docker
+> SQL Server and Azure Data Studio installation via Docker
 
 #### SQL Server:
-1. Acesse o [site oficial da Microsoft](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads) e baixe o instalador do SQL Server.
-2. Execute o instalador e siga as instruções na tela.
+1. Visit the [official Microsoft site](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) and download the SQL Server installer.
+2. Run the installer and follow the on-screen instructions.
 
 #### Azure Data Studio:
-1. Baixe o instalador do [site oficial](https://docs.microsoft.com/pt-br/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver15).
-2. Execute o instalador e siga as instruções na tela.
+1. Download the installer from the [official site](https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver15).
+2. Run the installer and follow the on-screen instructions.
+
+## Databases for Use in the Project
+
+The database files for use in the project are located in the `database` folder. Currently, the `curso_bk1.bak` file is available for use.
+
+### Restoring Databases
+**First restoration option:**
+0. Copy the restore file and paste it into the C drive if using `Windows`.
+1. Open SQL Server Management Studio or Azure Data Studio.
+2. Connect to your SQL Server instance.
+3. Right-click on "Databases" and select "Restore Database".
+4. Select the "Device" option and navigate to the location of the `.bak` file you want to restore.
+5. Follow the on-screen instructions to complete the restoration.
+
+**Second restoration option:**
+0. Copie o backup do database wwi.bak para area de trabalho.
+1. Use docker cp to copy the backup file into the container in the `/var/opt/mssql/backup` directory.
+```bash
+sudo docker cp wwi.bak sql1:/var/opt/mssql/backup
+```
 
 
+## Repository Structure
 
-## Bancos de Dados para Uso no Projeto
+The repository is organized as follows:
 
-Os arquivos de banco de dados para uso no projeto estão localizados na pasta `database`. Atualmente, temos o arquivo `curso_bk1.bak` disponível para uso.
+- [database: Databases for testing](database/README.md)
+- [instructions: DML DDL DCL TCL](instructions/README.md)
+- [operators: Operators used in SQL SERVER](operators/README.md)
+- [examples: General scripts](examples/)
 
-### Restaurando os Bancos de Dados
+## How to Use This Repository
 
-0. Copie o arquivo de restauração e cole na unidade C se for `Windows`.
-1. Abra o SQL Server Management Studio ou Azure Data Studio.
-2. Conecte-se à sua instância do SQL Server.
-3. Clique com o botão direito do mouse em "Databases" e selecione "Restore Database".
-4. Selecione a opção "Device" e navegue até o local do arquivo `.bak` que você deseja restaurar.
-5. Siga as instruções na tela para concluir a restauração.
+Each module has its own README with instructions and information about the topic covered.
 
-## Estrutura do Repositório
+Examples are available within each folder, and in the `examples/` folder, you will find scripts that can be used as a basis for additional practice and study.
 
-O repositório está organizado da seguinte forma:
+## Contribution
 
-- [database: Banco de Dados para usar como testes](database/README.md)
-- [instrucoes: DML DDL DCL TCL](instrucoes/README.md)
-- [operadores: Operadores usado no SQL SERVER](operadores/README.md)
-- [exemplos: Scripts em geral](exemplos/)
+Contributions to this repository are welcome! If you have suggestions, corrections, or would like to add additional content, feel free to open a *pull request*.
 
-## Como Utilizar este Repositório
+## External Resources
 
-Cada módulo possui seu próprio README com instruções e informações sobre o tópico abordado. 
+In addition to the materials available in this repository, it is recommended to consult the following external resources to deepen your knowledge:
 
-Os exemplos estão disponíveis dentro de cada pasta, e na pasta `exemplos/` temos scripts que podem ser utilizados como base para práticas e estudos adicionais.
-
-## Contribuição
-
-Contribuições para este repositório são bem-vindas! Caso tenha sugestões, correções ou deseje adicionar conteúdo adicional, sinta-se à vontade para abrir um *pull request*.
-
-## Recursos Externos
-
-Além dos materiais disponíveis neste repositório, recomenda-se consultar os seguintes recursos externos para aprofundar seus conhecimentos:
-
-- [Documentação Oficial do SQL Server](https://docs.microsoft.com/pt-br/sql/?view=sql-server-ver15)
+- [Official SQL Server Documentation](https://docs.microsoft.com/en-us/sql/?view=sql-server-ver15)
 - [Microsoft Learn - SQL Server](https://docs.microsoft.com/learn/sql-server/)
 
-## Referências
+## References
 
-Este repositório é baseado no curso da Udemy:
-Banco de dados Expert: Linguagem SQL e Administração.
+This repository is based on the Udemy course:
+Database Expert: SQL Language and Administration.
 
-Baseado no Guia de Estilo SQL · SQL Style Guide
-- https://www.sqlstyle.guide/pt-br/
+Based on the SQL Style Guide · SQL Style Guide
+- https://www.sqlstyle.guide/en/
 - https://github.com/treffynnon/sqlstyle.guide 
 - <a target="_blank" href="https://icons8.com/icon/laYYF3dV0Iew/microsoft-sql-server">sql server</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 
-## Licença
+## License
 
-Este repositório é licenciado sob a [MIT License](LICENSE).
+This repository is licensed under the [MIT License](LICENSE).
 
