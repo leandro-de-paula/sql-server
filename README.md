@@ -4,13 +4,18 @@
 ![linux](https://img.shields.io/badge/linux-gray.svg?logo=linux)
 ![ubuntu](https://img.shields.io/badge/ubuntu-gray.svg?logo=ubuntu)
 ![arch-linux](https://img.shields.io/badge/arch-gray.svg?logo=arch-linux)
+<<<<<<< HEAD
 ![microsof-windows](https://img.shields.io/badge/microsoft-windows-lightblue.svg?logo=microsof-windows)
+=======
+![microsoft-windows](https://img.shields.io/badge/microsoft-windows-lightblue.svg?logo=microsoft-windows)
+>>>>>>> 4-restoring-the-databases-step-1
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/leandro-de-paula/sql-server/refs/heads/main/icons8-sql-server-144.png" alt="sql-server" />
   <h1 style="border: none; margin: 0;"><strong>SQL-SERVER</strong></h1>
 </div>
 
+<<<<<<< HEAD
 
 
 ---
@@ -31,10 +36,31 @@ Este repositório contém materiais e exemplos para auxiliar no domínio de banc
 ---
 
 ## Instalação e Configuração do Ambiente
+=======
+---
+
+# Mastery of Databases and SQL Language in SQL Server
+
+This repository contains materials and examples to help master databases, concepts, and SQL language in the SQL Server environment. The content ranges from basic to advanced topics, providing a solid foundation for SQL Server database development and administration.
+
+---
+
+## Objectives
+
+- **Learn** the fundamental concepts of relational databases.
+- **Master** the SQL language for data manipulation and querying.
+- **Explore** advanced techniques for query optimization and performance.
+- **Understand** the main aspects of SQL Server database administration.
+
+---
+
+## Environment Setup and Installation
+>>>>>>> 4-restoring-the-databases-step-1
 
 ### Linux - **Ubuntu**
 
 #### Docker:
+<<<<<<< HEAD
 1. Atualize o índice de pacotes do apt: `sudo apt update`
 2. Instale alguns pacotes necessários para que o apt use pacotes via HTTPS: 
     ```bash
@@ -53,6 +79,26 @@ Este repositório contém materiais e exemplos para auxiliar no domínio de banc
     sudo apt update
     ```
 6. Instale o Docker: 
+=======
+1. Update the apt package index: `sudo apt update`
+2. Install packages to allow apt to use a repository over HTTPS:
+    ```bash
+    sudo apt install apt-transport-https ca-certificates curl software-properties-common
+    ```
+3. Add Docker’s official GPG key:
+    ```bash
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    ```
+4. Add the Docker repository to APT sources:
+    ```bash
+    sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+    ```
+5. Update the package index again:
+    ```bash
+    sudo apt update
+    ```
+6. Install Docker:
+>>>>>>> 4-restoring-the-databases-step-1
     ```bash
     sudo apt install docker-ce
     ```
@@ -61,43 +107,75 @@ Este repositório contém materiais e exemplos para auxiliar no domínio de banc
 
 #### Docker
 
+<<<<<<< HEAD
 1. Atualize os repositórios:
+=======
+1. Update repositories:
+>>>>>>> 4-restoring-the-databases-step-1
    ```bash
    sudo pacman -Syu
    ```
 
+<<<<<<< HEAD
 2. Instale o Docker pelo Pacman:
+=======
+2. Install Docker via Pacman:
+>>>>>>> 4-restoring-the-databases-step-1
    ```bash
    sudo pacman -S docker
    ```
 
+<<<<<<< HEAD
 3. Habilite e inicie o serviço do Docker:
    - Para habilitar o serviço no boot:
      ```bash
      sudo systemctl enable docker
      ```
    - Para iniciar o serviço:
+=======
+3. Enable and start the Docker service:
+   - To enable the service on boot:
+     ```bash
+     sudo systemctl enable docker
+     ```
+   - To start the service:
+>>>>>>> 4-restoring-the-databases-step-1
      ```bash
      sudo systemctl start docker
      ```
 
+<<<<<<< HEAD
 4. Adicione seu usuário ao grupo `docker` (opcional):
    Isso permite usar o Docker sem precisar de `sudo`.
    ```bash
    sudo usermod -aG docker $USER
    ```
    Depois, reinicie a sessão para aplicar as mudanças:
+=======
+4. Add your user to the `docker` group (optional):
+   This allows you to use Docker without `sudo`.
+   ```bash
+   sudo usermod -aG docker $USER
+   ```
+   Then, restart your session to apply the changes:
+>>>>>>> 4-restoring-the-databases-step-1
    ```bash
    newgrp docker
    ```
 
+<<<<<<< HEAD
 5. Verifique a instalação:
    Execute o comando abaixo para garantir que o Docker está funcionando:
+=======
+5. Verify the installation:
+   Run the following commands to ensure Docker is working:
+>>>>>>> 4-restoring-the-databases-step-1
    ```bash
    docker --version
    docker run hello-world
    ```
 
+<<<<<<< HEAD
 #### Observação:
 Para atualizações ou problemas específicos, consulte a [documentação oficial do Docker para Arch Linux](https://wiki.archlinux.org/title/Docker).
 
@@ -106,10 +184,21 @@ Para atualizações ou problemas específicos, consulte a [documentação oficia
 1. Siga as instruções oficiais da Microsoft para instalar o SQL Server no Docker: [Instruções aqui](https://docs.microsoft.com/pt-br/sql/linux/quickstart-install-connect-docker?view=sql-server-ver15&pivots=cs1-bash)
 
 ## Ferramentas Adicionais
+=======
+#### Note:
+For updates or specific issues, refer to the [official Docker documentation for Arch Linux](https://wiki.archlinux.org/title/Docker).
+
+---
+#### SQL Server:
+1. Follow the official Microsoft instructions to install SQL Server on Docker: [Instructions here](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver15&pivots=cs1-bash)
+
+## Additional Tools
+>>>>>>> 4-restoring-the-databases-step-1
 
 ### **Azure Data Studio**
 
 #### **Ubuntu**
+<<<<<<< HEAD
 1. Baixe o arquivo `.deb` do [site oficial](https://docs.microsoft.com/pt-br/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver15).
 2. Instale usando o comando: 
     ```bash
@@ -118,15 +207,30 @@ Para atualizações ou problemas específicos, consulte a [documentação oficia
 
 #### Azure Data Studio - Arch Linux:
 1. Use o AUR para instalar:
+=======
+1. Download the `.deb` file from the [official site](https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver15).
+2. Install using the command:
+    ```bash
+    sudo dpkg -i <filename>.deb
+    ```
+
+#### Azure Data Studio - Arch Linux:
+1. Use AUR to install:
+>>>>>>> 4-restoring-the-databases-step-1
    ```bash
    paru -S azuredatastudio-bin
    ```
 
+<<<<<<< HEAD
    Certifique-se de que o `paru` esteja instalado no seu sistema para utilizar esse método.
+=======
+   Make sure `paru` is installed on your system to use this method.
+>>>>>>> 4-restoring-the-databases-step-1
 
 ---
 
 ### Windows
+<<<<<<< HEAD
 >Instalação do SQL Server e Azure Data Studio via Docker
 
 #### SQL Server:
@@ -191,4 +295,76 @@ Baseado no Guia de Estilo SQL · SQL Style Guide
 ## Licença
 
 Este repositório é licenciado sob a [MIT License](LICENSE).
+=======
+> SQL Server and Azure Data Studio installation via Docker
+
+#### SQL Server:
+1. Visit the [official Microsoft site](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) and download the SQL Server installer.
+2. Run the installer and follow the on-screen instructions.
+
+#### Azure Data Studio:
+1. Download the installer from the [official site](https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver15).
+2. Run the installer and follow the on-screen instructions.
+
+## Databases for Use in the Project
+
+The database files for use in the project are located in the `database` folder. Currently, the `curso_bk1.bak` file is available for use.
+
+### Restoring Databases
+**First restoration option:**
+0. Copy the restore file and paste it into the C drive if using `Windows`.
+1. Open SQL Server Management Studio or Azure Data Studio.
+2. Connect to your SQL Server instance.
+3. Right-click on "Databases" and select "Restore Database".
+4. Select the "Device" option and navigate to the location of the `.bak` file you want to restore.
+5. Follow the on-screen instructions to complete the restoration.
+
+**Second restoration option:**
+0. Copie o backup do database wwi.bak para area de trabalho.
+1. Use docker cp to copy the backup file into the container in the `/var/opt/mssql/backup` directory.
+```bash
+sudo docker cp wwi.bak sql1:/var/opt/mssql/backup
+```
+
+
+## Repository Structure
+
+The repository is organized as follows:
+
+- [database: Databases for testing](database/README.md)
+- [instructions: DML DDL DCL TCL](instructions/README.md)
+- [operators: Operators used in SQL SERVER](operators/README.md)
+- [examples: General scripts](examples/)
+
+## How to Use This Repository
+
+Each module has its own README with instructions and information about the topic covered.
+
+Examples are available within each folder, and in the `examples/` folder, you will find scripts that can be used as a basis for additional practice and study.
+
+## Contribution
+
+Contributions to this repository are welcome! If you have suggestions, corrections, or would like to add additional content, feel free to open a *pull request*.
+
+## External Resources
+
+In addition to the materials available in this repository, it is recommended to consult the following external resources to deepen your knowledge:
+
+- [Official SQL Server Documentation](https://docs.microsoft.com/en-us/sql/?view=sql-server-ver15)
+- [Microsoft Learn - SQL Server](https://docs.microsoft.com/learn/sql-server/)
+
+## References
+
+This repository is based on the Udemy course:
+Database Expert: SQL Language and Administration.
+
+Based on the SQL Style Guide · SQL Style Guide
+- https://www.sqlstyle.guide/en/
+- https://github.com/treffynnon/sqlstyle.guide 
+- <a target="_blank" href="https://icons8.com/icon/laYYF3dV0Iew/microsoft-sql-server">sql server</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+## License
+
+This repository is licensed under the [MIT License](LICENSE).
+>>>>>>> 4-restoring-the-databases-step-1
 
